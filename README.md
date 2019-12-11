@@ -14,7 +14,7 @@ where `data/raw` contains raw datasets downloaded from [kaggle](https://www.kagg
 Download this repository by `git clone https://github.com/YezhouLi/605project.git`. 
 
 ## Group Menbers:
-Yezhou Li:  , github link: https://github.com/YezhouLi<br>
+Yezhou Li:  yli967@wisc.edu, github link: https://github.com/YezhouLi<br>
 Xiaoxiang Hua: xhua24@wisc.edu, github link: https://github.com/tomtomhua<br>
 Qiaoyu Wang: qwang382@wisc.edu, github link: https://github.com/silencekk1<br>
 Lu Chen: lchen487@wisc.edu, github link: https://github.com/LuChen525<br>
