@@ -1,6 +1,6 @@
 # 605project
 
-Because the dataset is extremely large, we do not upload them to github. The sturcture of whole project folder in our working environment (remote ubuntu) is shown as what follows (make sure to put the codes and the `data` folder at the same path when running), 
+Because the dataset is extremely large, we do not upload them to github. The sturcture of whole project folder in our working environment (remote ubuntu) is shown as what follows, 
 
 * `code/someCode`  
 * `data/mr_1_loc`  
