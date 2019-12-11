@@ -8,7 +8,13 @@ Because the dataset is extremely large, we do not upload them to github. The stu
 
 where `data/raw` contains raw datasets downloaded from [kaggle](https://www.kaggle.com/rsaxby/merra1). 
 
-`data/mr_1_loc` contains small dataset components splitted by `code/splitByLoc.sh`
+`data/mr_1_loc` contains small dataset components splitted by `code/splitByLoc.sh`. In order to run the `code/splitByLoc.sh` correctly, please run it after setting working dirctory to `605project` . 
+
+
+
+In order to submit parallel computation correctly, please run command after setting working dirctory to `605project/code` . 
+
+
 
 
 Download this repository by `git clone https://github.com/YezhouLi/605project.git`. 

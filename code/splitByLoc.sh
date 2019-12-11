@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# assume wd is '605G13'
+# assume wd is '605project'
 # take only one argument 
 # $1 should be either 1 or 4
 if [[ $# -ne 1 ]] ; then 
