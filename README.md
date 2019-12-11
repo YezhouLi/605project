@@ -15,7 +15,7 @@ Download this repository by `git clone https://github.com/YezhouLi/605project.gi
 
 ## Group Menbers:
 Yezhou Li:  , github link: <br>
-Xiaoxiang Hua: xhua24@wisc.edu, github link: <br>
+Xiaoxiang Hua: xhua24@wisc.edu, github link: https://github.com/tomtomhua<br>
 Qiaoyu Wang: qwang382@wisc.edu, github link: <br>
 Lu Chen: lchen487@wisc.edu, github link: <br>
 Zheng Ni: zni32@wisc.edu, github link: <br>
