@@ -9,6 +9,7 @@ Data <- read.csv(paste0("mr_1_loc_",args[1],".csv"),header = F)
 #test <- ts(data$X0.3926357626914978,start = as.Date(2013-01-24 01:30))
 library(forecast)
 Data$V17=as.Date(Data$V17)
+#V1 means wind, V2 means temperature, V13 means moisture, we can change it for further research
 
 newdata=tapply(Data$V1, Data$V17, mean)
 
