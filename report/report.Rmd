@@ -29,10 +29,19 @@ The table above shows the descriptions of most of variables and we can find that
 
 Firstly, we separate the data based on latitude and longitude to 357 sub-datas and group the data in 2010-2017 as training data and the data in 2018 as test data for our further comparison.
 
+Secondly, we choose the ARIMA model to fit the time series. For the convenience of parallel coding, we use the `forecast::auto.arima` to fit the ARIMA model automatically on the trainning data. Considering the seasonal effect, which cannot be detect easily by the auto.arima but is obvious in the plot, we fix the seasonal effect as 365.25. Then, we use stepwise selection to find the model with the least AIC criteria. 
 
-<center>![Figure 1](./pic/tsPlot.PNG){width=400px}<center>
+Using the `mr_1_loc_32.0_-113.75.csv` as an example, the selection procedure is showed in `Figure 1`. The final model is $ARIMA(2,0,0)(0,1,0)_{365}$, whose final AIC is 8566.52, which is the smallest in the model considered. And the mean square error is just 1.207, which means the model fit the data really good. The model can be denoted as below(here $y_t$ is interested variable and $\varepsilon_t$ is the white noise).
+
+$$(1-0.5188B+0.1356B^2)(1-B^{365})y_t=\varepsilon_t$$
+<center>
+```{r test1, fig.cap=c("Figure 1(Left), Figure 2(Right)"), out.width='50%',fig.show='hold',echo=FALSE,warning=FALSE,message=FALSE}
+plots=c("./pic/selection.png","./pic/tsPlot.png")
+knitr::include_graphics(plots)
+```
+</center>
 
 ## Conclusion
 
-As shown in `Figure 1`, the time series model approximately fits the test data of 2-meter eastward wind speed, indicating that our model has the ability to predict future environmental situations in the western part of United States.\
+As shown in `Figure 2`, the time series model approximately fits the test data of 2-meter eastward wind speed, indicating that our model has the ability to predict future environmental situations in the western part of United States.\
 According to the latest log file `tsjob-chtc_187671.log`, it costs, on averqage, 40 seconds, to train one time series model. Given that there are 357 locations, each has 14 model to train which adds up to 4998 models and about 55 hours, without the help of parallel computing, it will be extremely time-consuming to run this job on a normal laptop. 
